@@ -6,24 +6,39 @@ namespace Bulldozer
     {
         static void Main(string[] args)
         {
-            var dozer1 = new BullDozer("Yellow", "Mini");
-            var dozer2 = new BullDozer("Red", "Large");
-
-
-            Console.WriteLine("Bulldozer 1 is: " + dozer1.color);
-            Console.WriteLine("Bulldozer 2 is: " + dozer2.color);
+            var man = new Man();
+            var cart = new Cart();
+            var alien = new Alien();
         }
     }
 
-    public class BullDozer
+    public class Man
     {
-        public BullDozer (string _color, string _size)
+        public Man ()
         {
-            this.color = _color;
-            this.size = _size;
         }
-
+        public bool moves { get; set; }
+        public string name { get; set; }
         public string color { get; set; }
-        public string size { get; set; }
+    }
+
+    public class Cart
+    {
+        public Cart()
+        {
+        }
+        public bool moves { get; set; }
+        public string manufacturer { get; set; }
+        public string color { get; set; }
+    }
+
+    public class Alien
+    {
+        public Alien()
+        {
+        }
+        public bool moves { get; set; }
+        public string planet { get; set; }
+        public string color { get; set; }
     }
 }
