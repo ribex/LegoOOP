@@ -23,13 +23,28 @@ namespace Bulldozer
 
     }
 
-    // Man inherits from GeneralObject
-    public class Man : GeneralObject
+    public class Human : GeneralObject
+    {
+        public Human()
+        {
+        }
+
+        public string name { get; set; }
+    }
+
+    // Man inherits from Human
+    public class Man : Human
     {
         public Man ()
         {
         }
-        public string name { get; set; }
+    }
+
+    public class Woman : Human
+    {
+        public Woman()
+        {
+        }
     }
 
     public class Cart : GeneralObject
