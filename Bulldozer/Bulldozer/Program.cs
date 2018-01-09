@@ -7,10 +7,8 @@ namespace Bulldozer
         static void Main(string[] args)
         {
             var worker = new FactoryWorker();
-            worker.Count(4);
-            worker.Count(5);
-
-            worker.Count(4.5f);
+            var result = worker.AddNumbers(2, 3);
+            Console.WriteLine(result.ToString());
         }
     }
 
@@ -18,26 +16,17 @@ namespace Bulldozer
     {
         public FactoryWorker()
         {
-            
+
         }
 
-        public void Count(int number)
+        public int AddNumbers(int num1, int num2)
         {
-            if (Total == null)
-            {
-                Total = 0;
-            }
+            var result = num1 + num2;
 
-            Total = Total + Convert.ToSingle(number);
-            Console.WriteLine(Total.ToString());
+            result = result + 100;
+            result = result - 100;
+
+            return result;
         }
-
-        public void Count(float number)
-        {
-            Total = Total + number;
-            Console.WriteLine(Total.ToString());
-        }
-
-        public float Total { get; set; }
     }
 }
