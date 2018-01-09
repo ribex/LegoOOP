@@ -12,33 +12,39 @@ namespace Bulldozer
         }
     }
 
-    public class Man
+    public class GeneralObject
+    {
+        public GeneralObject()
+        {
+            
+        }
+        public bool moves { get; set; }
+        public string color { get; set; }
+
+    }
+
+    // Man inherits from GeneralObject
+    public class Man : GeneralObject
     {
         public Man ()
         {
         }
-        public bool moves { get; set; }
         public string name { get; set; }
-        public string color { get; set; }
     }
 
-    public class Cart
+    public class Cart : GeneralObject
     {
         public Cart()
         {
         }
-        public bool moves { get; set; }
         public string manufacturer { get; set; }
-        public string color { get; set; }
     }
 
-    public class Alien
+    public class Alien : GeneralObject
     {
         public Alien()
         {
         }
-        public bool moves { get; set; }
         public string planet { get; set; }
-        public string color { get; set; }
     }
 }
