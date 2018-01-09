@@ -7,9 +7,34 @@
 
         }
 
-        public string color { get; set; }
-        public string manufacturer { get; set; }
-
-
+        public string Color { get; set; }
+        public string Manufacturer { get; set; }
     }
+
+    // inheritance
+    public class SaloonCar : Car
+    {
+        public int NumberOfSeats { get; set; }
+
+        // polymorphism
+        public SaloonCar(int numberOfSeats)
+        {
+            this.NumberOfSeats = numberOfSeats;
+        }
+
+        public SaloonCar(int numberOfSeats, string manufacturer)
+        {
+            this.NumberOfSeats = numberOfSeats;
+            this.Manufacturer = manufacturer;
+        }
+
+        public SaloonCar(int numberOfSeats, string manufacturer, string color)
+        {
+            this.NumberOfSeats = numberOfSeats;
+            this.Manufacturer = manufacturer;
+            this.Color = color;
+        }
+    }
+
+
 }
